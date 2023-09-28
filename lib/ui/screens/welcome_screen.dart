@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gaveltwo_ui/ui/screens/sign_up_screen.dart';
+import 'package:gaveltwo_ui/ui/screens/auth/sign_up_screen.dart';
 import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
 

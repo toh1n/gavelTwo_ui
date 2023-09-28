@@ -26,15 +26,20 @@ class _GaveledItScreenState extends State<GaveledItScreen> {
     return ListView.builder(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       itemBuilder: (context, index) {
-        return LotCard(
-          lotName: lot[index].lotName,
-          itemCount: lot[index].itemCount,
-          scheduleDate: lot[index].scheduleDate,
-          status: lot[index].status,
-          imageLink: lot[index].imageLink,
+        return InkWell(
           onTap: (){
             Navigator.push(context, MaterialPageRoute(builder: (_) => const ProductListScreen()));
           },
+          child: LotCard(
+            lotName: lot[index].lotName,
+            itemCount: lot[index].itemCount,
+            scheduleDate: lot[index].scheduleDate,
+            status: lot[index].status,
+            imageLink: lot[index].imageLink,
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (_) => const ProductListScreen()));
+            },
+          ),
         );
       },
       itemCount: lot.length,

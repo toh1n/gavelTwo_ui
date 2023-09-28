@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
+import 'package:gaveltwo_ui/ui/widgets/product_card.dart';
 
 class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
@@ -20,97 +21,119 @@ class _ProductListScreenState extends State<ProductListScreen> {
         leading: SizedBox(
           height: 25,
           child: IconButton(
-            onPressed: (){
+            onPressed: () {
               Navigator.pop(context);
             },
             icon: const Icon(
-                Icons.arrow_back_ios_new,
-            color: Colors.black,
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
             ),
           ),
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(left: 19, right: 22, top: 9),
         child: Column(
           children: [
-            // Add other widgets here
-            Text('Widget Above GridView'),
+            Column(
+              children: [
+                const Row(
+                  children: [
+                    Text(
+                      "Luxury Watch",
+                      style: TextStyle(
+                          fontSize: 21,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                RichText(
+                  text: const TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      height: 1.5,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.black,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            SizedBox(
+              height: 27,
+              width: double.infinity,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    " LOTS",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500, fontSize: 18),
+                  ),
+                  Container(
+                      alignment: Alignment.center,
+                      padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 0.5,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          const Text(
+                            "Sort By",
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w300,
+                              color: Colors.black,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Image.asset(
+                            'assets/upDownPNG.png',
+                            height: 10,
+                            width: 11,
+                          ),
+                        ],
+                      )),
+                ],
+              ),
+            ),
+            const SizedBox(height: 13,),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
-                  mainAxisSpacing: 5,
+                  mainAxisSpacing: 0,
+                  childAspectRatio: 176/350
                 ),
                 itemBuilder: (context, index) {
-                   return Container(
-                     height: 200,
-                     width: 166,
-                     decoration: BoxDecoration(
-                       color: Colors.green,
-                       borderRadius: BorderRadius.circular(15)
-                     ),
-                   );
-                  },
+                  return ProductCard();
+                },
                 itemCount: 10,
               ),
             ),
           ],
         ),
       ),
-      // body: SingleChildScrollView(
-      //   child: Padding(
-      //     padding: const EdgeInsets.only(left: 16.0,right: 16,bottom: 16),
-      //     child: Column(
-      //       mainAxisAlignment: MainAxisAlignment.start,
-      //       crossAxisAlignment: CrossAxisAlignment.start,
-      //       children: [
-      //         const Text(
-      //           "Watch",
-      //           style: TextStyle(
-      //               fontSize: 21,
-      //               fontWeight: FontWeight.bold
-      //           ),
-      //         ),
-      //         const SizedBox(
-      //           height: 5,
-      //         ),
-      //         RichText(
-      //           text: const TextSpan(
-      //             style: TextStyle(
-      //               fontSize: 13,
-      //               height: 1.5, // Adjust the line height here
-      //               fontWeight: FontWeight.w300,
-      //               color: Colors.black,
-      //             ),
-      //             children: [
-      //               TextSpan(
-      //                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      //               ),
-      //             ],
-      //           ),
-      //         ),
-      //         const SizedBox(height: 10,),
-      //         GridView.builder(
-      //             itemCount: 10,
-      //             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-      //               crossAxisCount: 2,
-      //               childAspectRatio: 1.0,
-      //             ),
-      //             itemBuilder: (context, index) {
-      //               return Card(
-      //                 child: Image.network(
-      //                   "https://picsum.photos/250?image=${index + 10}",
-      //                   width: 100,
-      //                   height: 100,
-      //                 ),
-      //               );
-      //             })
-      //       ],
-      //     ),
-      //   ),
-      // ),
     );
   }
 }

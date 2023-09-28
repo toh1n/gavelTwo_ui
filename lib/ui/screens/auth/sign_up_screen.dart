@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gaveltwo_ui/ui/screens/otp_verify_screen.dart';
+import 'package:gaveltwo_ui/ui/screens/auth/otp_verify_screen.dart';
 import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
 
