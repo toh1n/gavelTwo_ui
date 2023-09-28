@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gaveltwo_ui/ui/screens/bottom_nav_base_screen.dart';
 import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
 
@@ -86,7 +87,7 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                       VerticalDivider(
                         color: Colors.grey,  //color of divider
                         width: 10, //width space of divider
-                        thickness: 2, //thickness of divier line
+                        thickness: 2, //thickness of divider line
                         indent: 10, //Spacing at the top of divider.
                         endIndent: 10, //Spacing at the bottom of divider.
                       ),
@@ -99,7 +100,9 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => const BottomNavBaseScreen()), (route) => false);
+              },
               child: const Text(
                 "Verify OTP",
                 style: TextStyle(
@@ -122,7 +125,9 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                   ),
                 ),
                 TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => const BottomNavBaseScreen()), (route) => false);
+                    },
                     style: TextButton.styleFrom(
                       padding: EdgeInsets.zero
                     ),

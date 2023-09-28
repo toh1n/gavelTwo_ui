@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gaveltwo_ui/ui/screens/bottom_nav_base_screen.dart';
-import 'package:gaveltwo_ui/ui/screens/otp_verify_screen.dart';
-import 'package:gaveltwo_ui/ui/screens/sign_up_screen.dart';
 import 'package:gaveltwo_ui/ui/screens/splash_screen.dart';
 import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 
@@ -21,6 +19,7 @@ class _GavelTwoState extends State<GavelTwo> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Poppins",
         elevatedButtonTheme: ElevatedButtonThemeData(

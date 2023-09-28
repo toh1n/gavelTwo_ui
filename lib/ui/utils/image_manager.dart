@@ -8,5 +8,6 @@ class ImageManager {
   static const String uaeFlagSVG = "assets/uaeFlag.svg";
   static const String uaeFlagPNG = "assets/UAEFlagPNG.png";
   static const String watch1PNG = "assets/watch1.png";
+  static const String car1PNG = "assets/car1.png";
 
 }
