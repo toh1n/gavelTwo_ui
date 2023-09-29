@@ -26,7 +26,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               width: 264,
             ),
             const SizedBox(
-              height: 60,
+              height: 109,
             ),
             const Text(
               "Welcome to GAVEL",
@@ -66,11 +66,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 50,
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (_) => const SignUpScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const SignUpScreen()));
               },
               child: const Text(
                 "Agree & Continue",

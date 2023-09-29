@@ -8,23 +8,27 @@ class LotCard extends StatelessWidget {
   final int itemCount;
   final String imageLink;
   final VoidCallback onTap;
-  const LotCard({super.key, required this.status, required this.scheduleDate, required this.lotName, required this.itemCount, required this.imageLink, required this.onTap});
+  const LotCard(
+      {super.key,
+      required this.status,
+      required this.scheduleDate,
+      required this.lotName,
+      required this.itemCount,
+      required this.imageLink,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0,left: 16,right: 16,bottom: 8),
+      padding: const EdgeInsets.only(top: 8.0, left: 16, right: 16, bottom: 8),
       child: Container(
         height: 274,
         width: double.infinity,
-        decoration:  BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(imageLink),
-                fit: BoxFit.fill
-            ),
-            borderRadius: BorderRadius.circular(18)
-        ),
-        child:  Center(
+        decoration: BoxDecoration(
+            image:
+                DecorationImage(image: AssetImage(imageLink), fit: BoxFit.fill),
+            borderRadius: BorderRadius.circular(18)),
+        child: Center(
           child: Column(
             children: [
               Row(
@@ -38,19 +42,21 @@ class LotCard extends StatelessWidget {
                           width: 9,
                           height: 9,
                           decoration: BoxDecoration(
-                            borderRadius:
-                            BorderRadius.circular(
-                                100),
+                            borderRadius: BorderRadius.circular(100),
                             color: Colors.green,
                           ),
                         ),
-                        const SizedBox(width: 8,),
-                         Text(status,
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          status,
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 9,
                             fontWeight: FontWeight.normal,
-                          ),),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -63,15 +69,14 @@ class LotCard extends StatelessWidget {
                         color: ColorManager.secondaryColor,
                         borderRadius: BorderRadius.circular(16),
                       ),
-                      child:  Center(
+                      child: Center(
                         child: Text(
                           scheduleDate,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
                               fontSize: 8,
                               fontWeight: FontWeight.w500,
-                              color: Colors.white
-                          ),
+                              color: Colors.white),
                         ),
                       ),
                     ),
@@ -79,7 +84,7 @@ class LotCard extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-               Text(
+              Text(
                 lotName,
                 style: const TextStyle(
                     fontWeight: FontWeight.w700,
@@ -98,10 +103,8 @@ class LotCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
                   ),
-
-                  child:  Row(
-                    mainAxisAlignment:
-                    MainAxisAlignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         "$itemCount",
@@ -118,8 +121,7 @@ class LotCard extends StatelessWidget {
                         'LOTS',
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight:
-                          FontWeight.w500,
+                          fontWeight: FontWeight.w500,
                           color: ColorManager.secondaryColor,
                         ),
                       ),
@@ -130,11 +132,9 @@ class LotCard extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-
             ],
           ),
         ),
-
       ),
     );
   }

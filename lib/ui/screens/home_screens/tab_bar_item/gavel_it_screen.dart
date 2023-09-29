@@ -13,12 +13,12 @@ class GaveledItScreen extends StatefulWidget {
 
 class _GaveledItScreenState extends State<GaveledItScreen> {
   List<LotModel> lot = [
-    LotModel("Luxury Watches", 35, "8-9 May", "Running", ImageManager.watch1PNG),
+    LotModel(
+        "Luxury Watches", 35, "8-9 May", "Running", ImageManager.watch1PNG),
     LotModel("Exotic Car", 30, "8-9 May", "Running", ImageManager.car1PNG),
-    LotModel("Luxury Watches", 15, "8-9 May", "Running", ImageManager.watch1PNG),
+    LotModel(
+        "Luxury Watches", 15, "8-9 May", "Running", ImageManager.watch1PNG),
     LotModel("Exotic Car", 30, "8-9 May", "Running", ImageManager.car1PNG),
-
-
   ];
 
   @override
@@ -27,8 +27,9 @@ class _GaveledItScreenState extends State<GaveledItScreen> {
       padding: const EdgeInsets.only(top: 10, bottom: 10),
       itemBuilder: (context, index) {
         return InkWell(
-          onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder: (_) => const ProductListScreen()));
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const ProductListScreen()));
           },
           child: LotCard(
             lotName: lot[index].lotName,
@@ -36,8 +37,9 @@ class _GaveledItScreenState extends State<GaveledItScreen> {
             scheduleDate: lot[index].scheduleDate,
             status: lot[index].status,
             imageLink: lot[index].imageLink,
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (_) => const ProductListScreen()));
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const ProductListScreen()));
             },
           ),
         );

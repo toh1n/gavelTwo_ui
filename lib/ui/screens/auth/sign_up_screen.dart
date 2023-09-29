@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gaveltwo_ui/ui/screens/auth/otp_verify_screen.dart';
 import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
@@ -12,9 +11,11 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  final TextEditingController phoneNumberTEController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: ColorManager.primaryColor,
       body: Center(
         child: Column(
@@ -31,99 +32,140 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             const Text(
               "Enter your phone number",
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 19
-              ),
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 19),
             ),
             const SizedBox(
               height: 4,
             ),
             const Text(
               'You will receive a verification code to this \n phone number.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.w300,
-              fontSize: 13,
-              color: Colors.black,
-              fontFamily: "Poppins",
-            ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 50,
-                  width: 58,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-                  child: SvgPicture.asset(
-                    ImageManager.uaeFlagSVG,
-                    height: 23,
-                    width: 26,
-                    fit: BoxFit.scaleDown,
-                  ),
-                ),
-                const SizedBox(width: 8,),
-                Container(
-                  height: 50,
-                  width: 242,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-                  child: const Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text("+971"),
-                      ),
-                      VerticalDivider(
-                        color: Colors.grey,  //color of divider
-                        width: 10, //width space of divider
-                        thickness: 2, //thickness of divier line
-                        indent: 10, //Spacing at the top of divider.
-                        endIndent: 10, //Spacing at the bottom of divider.
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.w300,
+                fontSize: 13,
+                color: Colors.black,
+                fontFamily: "Poppins",
+              ),
             ),
             const SizedBox(
-              height: 20,
+              height: 21,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 33.0, right: 33),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          width: 1,
+                          color: const Color(0xff9b9595),
+                        ),
+                      ),
+                      child: Image.asset(ImageManager.uaeFlagPNG),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 7,
+                  ),
+                  Expanded(
+                    flex: 5,
+                    child: Container(
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          width: 1,
+                          color: const Color(0xff9b9595),
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            flex: 1,
+                            child: Text(
+                              "+971",
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          const VerticalDivider(
+                            width: 10,
+                            thickness: 1,
+                            indent: 7,
+                            endIndent: 6,
+                            color: Color(0xffC7C3C3),
+                          ),
+                          Expanded(
+                            flex: 4,
+                            child: Container(
+                              margin: const EdgeInsets.only(left: 10),
+                              //  color: Colors.red,
+                              child: TextFormField(
+                                controller: phoneNumberTEController,
+                                keyboardType: TextInputType.number,
+                                decoration: const InputDecoration(
+                                  contentPadding: EdgeInsets.only(top: 3),
+                                  border: InputBorder.none,
+                                  hintText: 'Enter Your Phone Number',
+                                  hintStyle: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0xffC7C3C3),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 31,
             ),
             ElevatedButton(
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (_) => const OtpVerifyScreen()));
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const OtpVerifyScreen()));
               },
+              style: ElevatedButton.styleFrom(padding: EdgeInsets.zero),
               child: const Text(
                 "Send OTP",
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.bold,
                 ),
-            ),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            TextButton(onPressed: (){}, child: const Text(
-              "Continue as Guest",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 12,
-                fontWeight: FontWeight.w300,
-                decoration: TextDecoration.underline,
               ),
-            ))
-
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const OtpVerifyScreen()));
+              },
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              child: const Text(
+                "Continue as Guest",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w300,
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+            ),
           ],
         ),
       ),

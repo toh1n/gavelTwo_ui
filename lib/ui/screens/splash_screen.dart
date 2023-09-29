@@ -11,11 +11,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  
-  
-  void closeSplashScreen(){
+  void closeSplashScreen() {
     Future.delayed(const Duration(seconds: 2)).then((_) {
-      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => const WelcomeScreen()), (route) => false);
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (_) => const WelcomeScreen()),
+          (route) => false);
     });
   }
 
@@ -25,11 +26,9 @@ class _SplashScreenState extends State<SplashScreen> {
     closeSplashScreen();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: ColorManager.primaryColor,
       body: Center(
         child: Image.asset(

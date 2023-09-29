@@ -12,9 +12,7 @@ class _SellingFormScreenState extends State<SellingFormScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text(
-          "Selling Form Screen"
-        ),
+        child: Text("Selling Form Screen"),
       ),
     );
   }
