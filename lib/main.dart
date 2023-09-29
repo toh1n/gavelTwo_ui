@@ -19,15 +19,21 @@ class _GavelTwoState extends State<GavelTwo> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          fontFamily: "Poppins",
-          elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(
+        scaffoldBackgroundColor: ColorManager.primaryColor,
+        fontFamily: "Poppins",
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
             minimumSize: const Size(250, 41),
             backgroundColor: ColorManager.secondaryColor,
             elevation: 0,
             shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-          ))),
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
+            ),
+          ),
+        ),
+      ),
       home: const SplashScreen(),
     );
   }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gaveltwo_ui/ui/screens/welcome_screen.dart';
-import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   void closeSplashScreen() {
-    Future.delayed(const Duration(seconds: 2)).then((_) {
+    Future.delayed(const Duration(seconds: 3)).then((_) {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (_) => const WelcomeScreen()),
@@ -29,7 +28,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManager.primaryColor,
       body: Center(
         child: Image.asset(
           ImageManager.logoPNG,

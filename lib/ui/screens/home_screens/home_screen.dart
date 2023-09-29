@@ -17,7 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
       length: 2,
       child: SafeArea(
         child: Scaffold(
-          backgroundColor: ColorManager.primaryColor,
           appBar: AppBar(
             elevation: 1,
             toolbarHeight: 5,

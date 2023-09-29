@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gaveltwo_ui/ui/screens/auth/sign_up_screen.dart';
-import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -14,7 +13,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManager.primaryColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -58,10 +56,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                   TextSpan(text: '" to accept the \n '),
                   TextSpan(
-                      text: "Terms of Service",
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                      ))
+                    text: "Terms of Service",
+                    style: TextStyle(
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
                 ],
               ),
             ),

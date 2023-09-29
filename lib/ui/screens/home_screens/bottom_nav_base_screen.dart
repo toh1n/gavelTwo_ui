@@ -25,7 +25,6 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManager.primaryColor,
       body: _screenList[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,

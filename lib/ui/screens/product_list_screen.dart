@@ -14,7 +14,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManager.primaryColor,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: ColorManager.primaryColor,

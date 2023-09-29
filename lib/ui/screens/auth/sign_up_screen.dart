@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gaveltwo_ui/ui/screens/auth/otp_verify_screen.dart';
-import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -16,7 +15,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManager.primaryColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +42,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 fontWeight: FontWeight.w300,
                 fontSize: 13,
                 color: Colors.black,
-                fontFamily: "Poppins",
               ),
             ),
             const SizedBox(

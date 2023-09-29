@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gaveltwo_ui/ui/screens/home_screens/bottom_nav_base_screen.dart';
-import 'package:gaveltwo_ui/ui/utils/color_manager.dart';
 import 'package:gaveltwo_ui/ui/utils/image_manager.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -17,7 +16,6 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManager.primaryColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -85,8 +83,6 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                 controller: otpTEController,
                 keyboardType: TextInputType.number,
                 beforeTextPaste: (text) {
-                  //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
-                  //but you can show anything you want here, like your pop up saying wrong paste format or etc
                   return true;
                 },
               ),
@@ -118,25 +114,26 @@ class _OtpVerifyScreenState extends State<OtpVerifyScreen> {
                   style: TextStyle(fontWeight: FontWeight.w300, fontSize: 12),
                 ),
                 TextButton(
-                    onPressed: () {
-                      Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(
-                              builder: (_) => const BottomNavBaseScreen()),
-                          (route) => false);
-                    },
-                    style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                    child: const Text(
-                      "Resend in 56 sec",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline,
-                      ),
-                    )),
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const BottomNavBaseScreen()),
+                        (route) => false);
+                  },
+                  style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                  child: const Text(
+                    "Resend in 56 sec",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
