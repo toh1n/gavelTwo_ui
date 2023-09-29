@@ -40,189 +40,182 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
               ),
             ),
 
-            const SizedBox(
-              height: 10,
-            ),
-
-            Container(
-              margin: const EdgeInsets.only(left: 17, top: 9, right: 15),
-              child: const Column(
+            Padding(
+                padding: const EdgeInsets.only(left: 17, top: 9, right: 15),
+              child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  const Align(
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+
+                      children: [
+                        Text(
+                          "Watch",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            fontSize: 16,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'DAY-DATE',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const Divider(
+                    height: 40,
+                    color: Color(0xff71375f),
+                    thickness: .5,
+                  ),
+
+                  Column(
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Watch",
+                            'Starting Bid',
                             style: TextStyle(
                               fontWeight: FontWeight.w300,
-                              fontSize: 16,
+                              fontSize: 14,
                             ),
                           ),
-                          SizedBox(
-                            height: 5,
-                          ),
                           Text(
-                            'DAY-DATE',
+                            'AED 25',
                             style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13,
                             ),
                           ),
                         ],
                       ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-
-            Container(
-              margin: const EdgeInsets.only(left: 17, top: 9, right: 15),
-              height: 5,
-              child: const Divider(
-                color: Color(0xff71375f),
-                thickness: 1,
-                endIndent: 10,
-              ),
-            ),
-
-            Container(
-              margin: const EdgeInsets.only(left: 17, top: 13, right: 23),
-              child: Column(
-                children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Starting Bid',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 14,
-                        ),
+                      const SizedBox(
+                        height: 9,
                       ),
-                      Text(
-                        'AED 25',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 9,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Current Bid',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 14,
-                        ),
-                      ),
-                      Text(
-                        "AED 25",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 9,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Increment',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 14,
-                        ),
-                      ),
-                      Text(
-                        'AED 25',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 9,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Time Left',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 14,
-                        ),
-                      ),
-                      Text(
-                        '5 days',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 9,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Bid History',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 14,
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () {
-                          setState(() {
-                            isOpen = !isOpen;
-                          });
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(0.0),
-                          child: const Row(
-                            children: [
-                              Icon(
-                                CupertinoIcons.chevron_down,
-                                size: 12,
-                                weight: 0.1,
-                                color: Color(0xff71375F),
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Text(
-                                '9 bids',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 13,
-                                  decoration: TextDecoration.underline,
-                                  decorationThickness: 1.0,
-                                  color: Color(0xff71375F),
-                                ),
-                              ),
-                            ],
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Current Bid',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 14,
+                            ),
                           ),
-                        ),
+                          Text(
+                            "AED 25",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 9,
+                      ),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Increment',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 14,
+                            ),
+                          ),
+                          Text(
+                            'AED 25',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 9,
+                      ),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Time Left',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 14,
+                            ),
+                          ),
+                          Text(
+                            '5 days',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 9,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Bid History',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 14,
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              setState(() {
+                                isOpen = !isOpen;
+                              });
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(0.0),
+                              child: const Row(
+                                children: [
+                                  Icon(
+                                    CupertinoIcons.chevron_down,
+                                    size: 12,
+                                    weight: 0.1,
+                                    color: Color(0xff71375F),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    '9 bids',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 13,
+                                      decoration: TextDecoration.underline,
+                                      decorationThickness: 1.0,
+                                      color: Color(0xff71375F),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -235,7 +228,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
               child: Container(
                 margin: const EdgeInsets.only(top: 12),
                 padding: const EdgeInsets.only(top: 18, left: 17, right: 17),
-                color: const Color(0xfffffef6),
+                color: Colors.white,
                 width: double.infinity,
                 child: SingleChildScrollView(
                   physics: const ScrollPhysics(),
@@ -245,38 +238,36 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                         children: [
                           Expanded(
                               child: Text(
-                            "NAME",
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          )),
+                                "NAME",
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              )),
                           Expanded(
                               child: Text(
-                            "BID",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          )),
+                                "BID",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              )),
                           Expanded(
-                              child: Text(
-                            "DATE & TIME",
-                            textAlign: TextAlign.right,
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
+                            child: Text(
+                              "DATE & TIME",
+                              textAlign: TextAlign.right,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          )),
+                          ),
                         ],
                       ),
                       const Divider(
                         color: Color(0xff71375f),
                         thickness: 0.2,
-                      ),
-                      const SizedBox(
-                        height: 8,
                       ),
                       ListView.builder(
                           physics: const NeverScrollableScrollPhysics(),
@@ -325,8 +316,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                                         style: TextStyle(
                                           fontSize: 9,
                                           fontWeight: FontWeight.w400,
-                                          color: Colors
-                                              .black, // Set your desired text color here
+                                          color: Colors.black,
                                         ),
                                         textAlign: TextAlign.right,
                                       ),
@@ -338,8 +328,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                                         style: TextStyle(
                                           fontSize: 9,
                                           fontWeight: FontWeight.w500,
-                                          color: Colors
-                                              .black, // Set your desired text color here
+                                          color: Colors.black,
                                         ),
                                         textAlign: TextAlign.right,
                                       ),
@@ -358,311 +347,306 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
               ),
             ),
 
-            Container(
-              margin: const EdgeInsets.only(
-                  left: 17, top: 9, right: 15, bottom: 14),
-              height: 5,
-              child: const Divider(
-                color: Color(0xff71375f),
-                thickness: 1,
-                endIndent: 10,
-              ),
-            ),
-
-            ElevatedButton(
-                onPressed: () {
-                  isOpen = !isOpen;
-                  setState(() {});
-                },
-                child: const Text(
-                  "VERIFY MY PHONE NUMBER",
-                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                )),
-
-            Container(
-              margin: const EdgeInsets.only(left: 17, top: 14, right: 15),
-              height: 5,
-              child: const Divider(
-                color: Color(0xff71375f),
-                thickness: 1,
-                endIndent: 10,
-              ),
-            ),
-
-            const SizedBox(
-              height: 16,
-            ),
-
-            Container(
-              margin: const EdgeInsets.only(top: 20),
-              padding: const EdgeInsets.only(left: 17, right: 15),
-              child: const Column(
+            Padding(
+                padding: const EdgeInsets.only(left: 17, top: 9, right: 15),
+              child: Column(
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Product Details',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                        ),
-                      ),
-                    ],
+                  const Divider(
+                    height: 40,
+                    color: Color(0xff71375f),
+                    thickness: .5,
                   ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Reference Number',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          '18238',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 11,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Condition',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          'very good',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 11,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Scope of Delivery',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          'Watch with original box',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 11,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Year of Production',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          'Unknown',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 11,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Case Diameter',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          '30 mm',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 11,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Lug Width',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          '3 mm',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 11,
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          'Movement',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          'Manual winding',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
 
-            // Description
-
-            Container(
-              margin: const EdgeInsets.only(top: 26, bottom: 64),
-              padding: const EdgeInsets.only(left: 17, right: 15),
-              child: const Column(
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        'Description',
-                        style: TextStyle(
-                          color: Color(0xff3C3A3A),
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Manual windLorem ipsum dolor sit amet, consectetur adipiscing elit,"
-                    " sed do eiusmod tempor incididunt ut labore et dolore"
-                    " magna aliqua. Manual windLorem ipsum dolor sit amet, "
-                    "consectetur adipiscing elit, sed do eiusmod tempor incididunt "
-                    "ut labore et dolore magna aliqua.",
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 13,
-                      color: Color(0xff3C3A3A),
-                      height: 1.8, // Adjust the line height here
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "VERIFY MY PHONE NUMBER",
+                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                     ),
                   ),
+
+                  const Divider(
+                    height: 40,
+                    color: Color(0xff71375f),
+                    thickness: .5,
+                  ),
+
+                  const SizedBox(
+                    height: 16,
+                  ),
+
+                  const Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Product Details',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Text(
+                              'Reference Number',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              '18238',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 11,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Text(
+                              'Condition',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'very good',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 11,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Text(
+                              'Scope of Delivery',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'Watch with original box',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 11,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Text(
+                              'Year of Production',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'Unknown',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 11,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Text(
+                              'Case Diameter',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              '30 mm',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 11,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Text(
+                              'Lug Width',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              '3 mm',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 11,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            flex: 1,
+                            child: Text(
+                              'Movement',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'Manual winding',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(
+                    height: 16,
+                  ),
+
+                  const Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Description',
+                            style: TextStyle(
+                              color: Color(0xff3C3A3A),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Manual windLorem ipsum dolor sit amet, consectetur adipiscing elit,"
+                            " sed do eiusmod tempor incididunt ut labore et dolore"
+                            " magna aliqua. Manual windLorem ipsum dolor sit amet, "
+                            "consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+                            "ut labore et dolore magna aliqua.",
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13,
+                          color: Color(0xff3C3A3A),
+                          height: 1.8, // Adjust the line height here
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
                 ],
               ),
-            ),
+            )
+
+
           ],
         ),
       ),

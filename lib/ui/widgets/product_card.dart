@@ -39,100 +39,86 @@ class _ProductCardState extends State<ProductCard> {
               fit: BoxFit.fill,
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: 5, top: 9),
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+          const Padding(
+            padding: EdgeInsets.only(left: 5, top: 4),
+            child: Column(
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "widget.choice.name",
-                      style:
-                          TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
-                    ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      'DAY-DATE',
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Name",
+                        style:
+                        TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        'DAY-DATE',
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(left: 5, top: 10),
-            child: const Column(
-              children: [
+                SizedBox(height: 4,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "STARTING BID",
                       style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                      TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
                     ),
                     Text(
-                      'AED ',
+                      'AED 50000',
                       style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                      TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
-              ],
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(left: 5, top: 4),
-            child: const Column(
-              children: [
+                SizedBox(height: 4,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Current BID",
                       style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                      TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
                     ),
                     Text(
-                      'AED ',
+                      'AED 30000',
                       style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                      TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
-              ],
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(left: 5, top: 4),
-            child: const Column(
-              children: [
+                SizedBox(height: 4,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "TIME LEFT",
                       style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                      TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
                     ),
                     Text(
                       '7 DAYS',
                       style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
+                      TextStyle(fontSize: 10, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
               ],
             ),
           ),
+          
         ],
       ),
     );
