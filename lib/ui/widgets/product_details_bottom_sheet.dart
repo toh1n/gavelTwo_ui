@@ -395,7 +395,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                       Row(
                         children: [
                           Expanded(
-                            flex: 1,
+                            flex: 2,
                             child: Text(
                               'Reference Number',
                               style: TextStyle(
@@ -408,7 +408,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                             width: 20,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               '18238',
                               style: TextStyle(
@@ -425,7 +425,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                       Row(
                         children: [
                           Expanded(
-                            flex: 1,
+                            flex: 2,
                             child: Text(
                               'Condition',
                               style: TextStyle(
@@ -438,7 +438,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                             width: 20,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               'very good',
                               style: TextStyle(
@@ -455,7 +455,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                       Row(
                         children: [
                           Expanded(
-                            flex: 1,
+                            flex: 2,
                             child: Text(
                               'Scope of Delivery',
                               style: TextStyle(
@@ -468,7 +468,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                             width: 20,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               'Watch with original box',
                               style: TextStyle(
@@ -485,7 +485,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                       Row(
                         children: [
                           Expanded(
-                            flex: 1,
+                            flex: 2,
                             child: Text(
                               'Year of Production',
                               style: TextStyle(
@@ -498,7 +498,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                             width: 20,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               'Unknown',
                               style: TextStyle(
@@ -515,7 +515,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                       Row(
                         children: [
                           Expanded(
-                            flex: 1,
+                            flex: 2,
                             child: Text(
                               'Case Diameter',
                               style: TextStyle(
@@ -528,7 +528,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                             width: 20,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               '30 mm',
                               style: TextStyle(
@@ -545,7 +545,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                       Row(
                         children: [
                           Expanded(
-                            flex: 1,
+                            flex: 2,
                             child: Text(
                               'Lug Width',
                               style: TextStyle(
@@ -558,7 +558,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                             width: 20,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               '3 mm',
                               style: TextStyle(
@@ -575,7 +575,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                       Row(
                         children: [
                           Expanded(
-                            flex: 1,
+                            flex: 2,
                             child: Text(
                               'Movement',
                               style: TextStyle(
@@ -588,7 +588,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                             width: 20,
                           ),
                           Expanded(
-                            flex: 2,
+                            flex: 3,
                             child: Text(
                               'Manual winding',
                               style: TextStyle(
@@ -644,9 +644,7 @@ class _ProductDetailsBottomSheetState extends State<ProductDetailsBottomSheet> {
                   ),
                 ],
               ),
-            )
-
-
+            ),
           ],
         ),
       ),
